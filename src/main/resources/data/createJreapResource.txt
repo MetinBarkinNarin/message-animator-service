@@ -1,0 +1,1 @@
+{"type":"DomainEventEnvelopeImpl","key":2650,"eventType":"CREATE_JREAP_RESOURCE_EVENT","event":{"type":"CreateJreapResourceEvent","ip":"10.0.81.57","destinationPort":4001,"localPort":4001,"connectionType":"TCP_CLIENT","networkInterface":null,"tcpNoDelay":null,"id":0}}

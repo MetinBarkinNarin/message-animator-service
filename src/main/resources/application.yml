@@ -1,0 +1,38 @@
+animator:
+  schema-registry-url: http://localhost:9081
+  sending-data-props:
+    m_message:
+      times: 100
+      interval: 3
+      key: 1101
+      topicName: m-mmessage-topic
+      fileName: data/mMessageWithNetworkId.txt
+    notification:
+      times: 10000
+      interval: 3
+      workerNumber: 5
+      topicName: notification-topic
+      fileName: data/notification.txt
+      sendingType: AVRO
+      schemaFileName: schema/notification-schema.avsc
+    base-tactical:
+      times: 10000
+      key: 1
+      interval: 3
+      topicName: mdlp-input-topic
+      fileName: data/baseTacticalModel.txt
+    create-jreap-resource:
+      times: 1
+      key: 1
+      interval: 3
+      topicName: resource-event-topic
+      fileName: data/createJreapResource.txt
+
+spring:
+  kafka:
+    bootstrap-servers: 10.150.17.73:9092
+    streams:
+      application-id: animator-service
+server:
+  port: 8083
+

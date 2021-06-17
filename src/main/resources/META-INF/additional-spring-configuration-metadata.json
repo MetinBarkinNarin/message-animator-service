@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "animator.schema-registry-url",
+      "type": "java.lang.String",
+      "description": "Description for animator.schema-registry-url."
+    },
+    {
+      "name": "animator.sending-data-props",
+      "type": "java.lang.String",
+      "description": "Description for animator.sending-data-props."
+    }
+  ]
+}

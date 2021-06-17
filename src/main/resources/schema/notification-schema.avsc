@@ -1,0 +1,102 @@
+{
+  "type": "record",
+  "name": "NotificationDTO",
+  "namespace": "tr.com.havelsan.kkss.tdlym.domain.notification",
+  "fields": [
+    {
+      "name": "description",
+      "type": "string"
+    },
+    {
+      "name": "params",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    },
+    {
+      "name": "code",
+      "type": "string"
+    },
+    {
+      "name": "mlaId",
+      "type": "string"
+    },
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "channel",
+      "type": {
+        "type": "enum",
+        "name": "NotificationChannel",
+        "symbols": [
+          "IEM",
+          "TN",
+          "JREAP",
+          "TERMINAL",
+          "SIMPLE",
+          "NTU",
+          "PARTICIPANT",
+          "L16",
+          "FIMFOM",
+          "NTR",
+          "TIMESLOT",
+          "L16MESSAGE",
+          "L11MESSAGE",
+          "NET_MGMT",
+          "TSDF",
+          "L11",
+          "MSG_COUNT_THRESHOLD",
+          "EXTERNAL_TIME",
+          "FKA",
+          "TIMESLOT_VIOLATION"
+        ]
+      }
+    },
+    {
+      "name": "category",
+      "type": {
+        "type": "enum",
+        "name": "Category",
+        "namespace": "tr.com.havelsan.altyapi.notification.api",
+        "symbols": [
+          "ADVICE",
+          "WARNING",
+          "ALARM"
+        ]
+      }
+    },
+    {
+      "name": "link",
+      "type": "string"
+    },
+    {
+      "name": "targetObject",
+      "type": {
+        "type": "record",
+        "name": "TargetObject",
+        "namespace": "tr.com.havelsan.altyapi.notification.api",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "context",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "type",
+      "type": "string"
+    }
+  ]
+}
